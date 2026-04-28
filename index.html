@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimnaseando - Rutinas fitness para principiantes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Encabezado principal de la página -->
+    <header>
+        <h1>Gimnaseando</h1>
+        <p>Rutinas fitness para principiantes</p>
+
+        <!-- Menú de navegación -->
+        <nav>
+            <ul>
+                <a href="#inicio">Inicio</a>
+                <a href="#rutinas">Rutinas</a>
+                <a href="#consejos">Consejos</a>
+                <a href="#contacto">Contacto</a>
+            </ul>
+        </nav>
+
+        <!-- Botón para modo oscuro -->
+        <button id="modoOscuro">Cambiar modo</button>
+    </header>
+
+    <main>
+        <!-- Sección de inicio -->
+        <section id="inicio">
+            <h2>Empieza a entrenar de forma sencilla</h2>
+            <p>FitStart es una página pensada para personas que quieren iniciarse en el fitness con rutinas básicas, consejos útiles y ejercicios fáciles de seguir.</p>
+        </section>
+
+        <!-- Sección de rutinas -->
+        <section id="rutinas">
+            <h2>Rutinas recomendadas</h2>
+
+            <article>
+                <h3>Rutina de cuerpo completo</h3>
+                <p>Ideal para empezar a entrenar todo el cuerpo de forma equilibrada.</p>
+            </article>
+
+            <article>
+                <h3>Rutina de tren superior</h3>
+                <p>Enfocada en pecho, espalda, hombros y brazos con ejercicios básicos.</p>
+            </article>
+
+            <article>
+                <h3>Rutina de tren inferior</h3>
+                <p>Perfecta para trabajar piernas y glúteos con ejercicios sencillos.</p>
+            </article>
+        </section>
+
+        <!-- Sección de consejos -->
+        <section id="consejos">
+            <h2>Consejos para principiantes</h2>
+            <ul>
+                <li>Calienta antes de entrenar.</li>
+                <li>Descansa correctamente.</li>
+                <li>Cuida la técnica de los ejercicios.</li>
+                <li>Sé constante y no quieras avanzar demasiado rápido.</li>
+            </ul>
+        </section>
+
+        <!-- Sección de contacto -->
+        <section id="contacto">
+            <h2>Formulario de contacto</h2>
+
+            <form id="formulario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo">
+
+                <label for="objetivo">Objetivo:</label>
+                <select id="objetivo" name="objetivo">
+                    <option value="">Selecciona una opción</option>
+                    <option value="perder_grasa">Perder grasa</option>
+                    <option value="ganar_musculo">Ganar músculo</option>
+                    <option value="mantenerse_activo">Mantenerse activo</option>
+                </select>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje"></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <p id="mensajeFormulario"></p>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Proyecto de Lenguaje de Marcas - 1º DAW</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
