@@ -3,100 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gimnaseando - Rutinas fitness para principiantes</title>
+    <title>Gimnaseando</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Encabezado principal de la página -->
-    <header>
+    <header class="cabecera">
         <h1>Gimnaseando</h1>
-        <p>Rutinas fitness para principiantes</p>
+        <p>Rutinas fitness sencillas para principiantes</p>
 
-        <!-- Menú de navegación -->
-        <nav>
-            <ul>
-                <a href="#inicio">Inicio</a>
-                <a href="#rutinas">Rutinas</a>
-                <a href="#consejos">Consejos</a>
-                <a href="#contacto">Contacto</a>
-            </ul>
+        <nav class="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#rutinas">Rutinas</a>
+            <a href="#consejos">Consejos</a>
+            <a href="#calculadora">Calculadora</a>
+            <a href="#contacto">Contacto</a>
         </nav>
 
-        <!-- Botón para modo oscuro -->
-        <button id="modoOscuro">Cambiar modo</button>
+        <button id="modoBtn" class="boton-secundario">Cambiar modo</button>
     </header>
 
     <main>
-        <!-- Sección de inicio -->
-        <section id="inicio">
+
+        <section id="inicio" class="seccion">
             <h2>Empieza a entrenar de forma sencilla</h2>
-            <p>FitStart es una página pensada para personas que quieren iniciarse en el fitness con rutinas básicas, consejos útiles y ejercicios fáciles de seguir.</p>
+            <p>
+                Gimnaseando es una página pensada para personas que quieren empezar a hacer ejercicio
+                sin complicarse. Aquí encontrarás rutinas básicas, consejos y una pequeña calculadora
+                de IMC.
+            </p>
+
+            <div class="resumen">
+                <div>
+                    <strong>3</strong>
+                    <span>rutinas básicas</span>
+                </div>
+
+                <div>
+                    <strong>100%</strong>
+                    <span>para principiantes</span>
+                </div>
+
+                <div>
+                    <strong>0</strong>
+                    <span>material necesario</span>
+                </div>
+            </div>
         </section>
 
-        <!-- Sección de rutinas -->
-        <section id="rutinas">
+        <section id="rutinas" class="seccion">
             <h2>Rutinas recomendadas</h2>
 
-            <article>
-                <h3>Rutina de cuerpo completo</h3>
-                <p>Ideal para empezar a entrenar todo el cuerpo de forma equilibrada.</p>
-            </article>
+            <div class="contenedor-tarjetas">
+                <article class="tarjeta">
+                    <img src="img/fuerza.png" alt="Persona haciendo ejercicio de fuerza" class="imagen-tarjeta">
+                    <h3>Cuerpo completo</h3>
+                    <p>Ideal para trabajar piernas, pecho, abdomen y brazos de forma equilibrada.</p>
+                    <ul>
+                        <li>10 sentadillas</li>
+                        <li>8 flexiones apoyadas</li>
+                        <li>20 segundos de plancha</li>
+                    </ul>
+                </article>
 
-            <article>
-                <h3>Rutina de tren superior</h3>
-                <p>Enfocada en pecho, espalda, hombros y brazos con ejercicios básicos.</p>
-            </article>
+                <article class="tarjeta">
+                    <img src="img/cardio.png" alt="Persona haciendo ejercicio de cardio" class="imagen-tarjeta">
+                    <h3>Cardio suave</h3>
+                    <p>Perfecta para mejorar la resistencia sin empezar demasiado fuerte.</p>
+                    <ul>
+                        <li>10 minutos caminando rápido</li>
+                        <li>20 jumping jacks suaves</li>
+                        <li>Movilidad de piernas</li>
+                    </ul>
+                </article>
 
-            <article>
-                <h3>Rutina de tren inferior</h3>
-                <p>Perfecta para trabajar piernas y glúteos con ejercicios sencillos.</p>
-            </article>
+                <article class="tarjeta">
+                    <img src="img/movilidad.png" alt="Persona haciendo estiramientos" class="imagen-tarjeta">
+                    <h3>Movilidad</h3>
+                    <p>Una rutina sencilla para mejorar postura, flexibilidad y recuperación.</p>
+                    <ul>
+                        <li>Estiramiento de espalda</li>
+                        <li>Movilidad de hombros</li>
+                        <li>Estiramiento de piernas</li>
+                    </ul>
+                </article>
+            </div>
+
+            <div class="bloque-interactivo">
+                <h3>Generador de rutina rápida</h3>
+                <p>Pulsa el botón y la página te recomendará una rutina aleatoria.</p>
+                <button id="rutinaBtn">Mostrar rutina aleatoria</button>
+                <p id="rutinaResultado" class="resultado"></p>
+            </div>
         </section>
 
-        <!-- Sección de consejos -->
-        <section id="consejos">
-            <h2>Consejos para principiantes</h2>
-            <ul>
-                <li>Calienta antes de entrenar.</li>
-                <li>Descansa correctamente.</li>
-                <li>Cuida la técnica de los ejercicios.</li>
-                <li>Sé constante y no quieras avanzar demasiado rápido.</li>
-            </ul>
+        <section id="consejos" class="seccion">
+            <h2>Consejos básicos</h2>
+
+            <div class="consejos-grid">
+                <article>
+                    <h3>Empieza poco a poco</h3>
+                    <p>No hace falta entrenar todos los días. Al principio es mejor ser constante.</p>
+                </article>
+
+                <article>
+                    <h3>Calienta antes</h3>
+                    <p>Un calentamiento corto ayuda a evitar molestias y mejora el entrenamiento.</p>
+                </article>
+
+                <article>
+                    <h3>Descansa</h3>
+                    <p>El descanso también forma parte del progreso. Dormir bien es importante.</p>
+                </article>
+
+                <article>
+                    <h3>Cuida la técnica</h3>
+                    <p>Es mejor hacer menos repeticiones bien hechas que muchas mal hechas.</p>
+                </article>
+            </div>
         </section>
 
-        <!-- Sección de contacto -->
-        <section id="contacto">
+        <section id="calculadora" class="seccion">
+            <h2>Calculadora de IMC</h2>
+            <p>
+                Introduce tu peso y altura para obtener un cálculo aproximado del IMC.
+                Es solo una referencia orientativa.
+            </p>
+
+            <div class="formulario-simple">
+                <label for="peso">Peso en kg:</label>
+                <input type="number" id="peso" placeholder="Ejemplo: 70">
+
+                <label for="altura">Altura en metros:</label>
+                <input type="number" id="altura" step="0.01" placeholder="Ejemplo: 1.75">
+
+                <button id="calcularBtn">Calcular IMC</button>
+
+                <p id="resultadoIMC" class="resultado"></p>
+            </div>
+        </section>
+
+        <section id="contacto" class="seccion">
             <h2>Formulario de contacto</h2>
+            <p>
+                Rellena el formulario para recibir una recomendación personalizada según tu objetivo.
+                El formulario no envía datos reales, pero muestra una respuesta en pantalla usando JavaScript.
+            </p>
 
-            <form id="formulario">
+            <form id="formulario" novalidate>
                 <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre">
+                <input type="text" id="nombre" placeholder="Escribe tu nombre">
 
-                <label for="correo">Correo electrónico:</label>
-                <input type="email" id="correo" name="correo">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" placeholder="ejemplo@email.com">
 
-                <label for="objetivo">Objetivo:</label>
-                <select id="objetivo" name="objetivo">
+                <label for="objetivo">Objetivo principal:</label>
+                <select id="objetivo">
                     <option value="">Selecciona una opción</option>
-                    <option value="perder_grasa">Perder grasa</option>
-                    <option value="ganar_musculo">Ganar músculo</option>
-                    <option value="mantenerse_activo">Mantenerse activo</option>
+                    <option value="ganar fuerza">Ganar fuerza</option>
+                    <option value="perder grasa">Perder grasa</option>
+                    <option value="mejorar resistencia">Mejorar resistencia</option>
+                    <option value="empezar desde cero">Empezar desde cero</option>
+                </select>
+
+                <label for="nivel">Nivel actual:</label>
+                <select id="nivel">
+                    <option value="">Selecciona una opción</option>
+                    <option value="principiante">Principiante</option>
+                    <option value="intermedio">Intermedio</option>
+                    <option value="avanzado">Avanzado</option>
                 </select>
 
                 <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje"></textarea>
+                <textarea id="mensaje" placeholder="Cuéntanos brevemente qué buscas"></textarea>
 
-                <button type="submit">Enviar</button>
+                <button type="submit">Enviar formulario</button>
+                <button type="button" id="limpiarBtn" class="boton-secundario">Limpiar</button>
             </form>
 
-            <p id="mensajeFormulario"></p>
+            <div id="respuestaFormulario" class="respuesta-formulario oculto">
+                <h3>Respuesta del formulario</h3>
+                <p id="mensajeFormulario"></p>
+                <div id="datosFormulario"></div>
+            </div>
         </section>
+
     </main>
 
-    <!-- Pie de página -->
     <footer>
         <p>Proyecto de Lenguaje de Marcas - 1º DAW</p>
+        <p>HTML, CSS, JavaScript y GitHub Pages</p>
     </footer>
 
     <script src="js/script.js"></script>
